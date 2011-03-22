@@ -1,5 +1,6 @@
 package Vendas.DomainModel;
 
+//import java.sql.Date;
 import javax.persistence.*;
 
 @Entity
@@ -8,7 +9,7 @@ import javax.persistence.*;
 public class Vendas {
 	
 	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@OneToMany(fetch=FetchType.LAZY)
 	@Id
 	private int id;
@@ -17,7 +18,7 @@ public class Vendas {
 	@JoinColumn(name="id_cliente")
 	private Cliente cliente;
 
-    //@Column(name="Data")
+	//@Column(name="Data")
     //private Date data;
 
 	@Column(name="ValorTotal")
@@ -40,13 +41,14 @@ public class Vendas {
 	}
 
 	//public Date getData() {
-	//	return data;
+	//	return getData();
 	//}
-
+	
 	//public void setData(Date data) {
 	//	this.data = data;
 	//}
 
+	
 	public float getValortotal() {
 		return valortotal;
 	}
@@ -54,7 +56,7 @@ public class Vendas {
 	public void setValortotal(float valortotal) {
 		this.valortotal = valortotal;
 	}
-	
+
 	
 
 }

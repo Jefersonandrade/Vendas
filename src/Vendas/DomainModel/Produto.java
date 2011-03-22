@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Produto {
 	
 	@Column(name="id")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@OneToMany(fetch=FetchType.LAZY)
 	@Id
 	

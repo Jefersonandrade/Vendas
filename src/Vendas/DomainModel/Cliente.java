@@ -2,16 +2,18 @@ package Vendas.DomainModel;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name="cliente")
 
 public class Cliente {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@OneToMany
 	@Column(name="id")
-	
+	@Id
 	private int id;
+	
 	@Column
 	private String nome;
 	
